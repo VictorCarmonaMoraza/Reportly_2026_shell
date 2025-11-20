@@ -14,6 +14,13 @@ export const routes: Routes = [
     title: 'Microfront1',
   },
   {
+    path: 'reports',
+    loadChildren: () =>
+      import('reports/Module').then(m => m.RemoteEntryModule),
+    title: 'Microfront2',
+  },
+
+  {
     path: '**',
     redirectTo: 'home',
   }
